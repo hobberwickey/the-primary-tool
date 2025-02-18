@@ -1,0 +1,10 @@
+#landing-page {
+	.actions {
+		display: flex;
+		width: 100%;
+
+		& > div {
+			flex: 1;
+		}
+	}
+}

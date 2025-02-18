@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import "./scss/styles.scss";
+
+import { BrowserRouter, Routes, Route } from "react-router";
+
+import { LandingPage } from "./pages/landing.js";
+import { VotersLandingPage } from "./pages/voters-landing.js";
+import { CandidateProfile } from "./pages/candidate-profile.js";
+
+import { CandidateApplicationPage } from "./pages/candidate-application.js";
+import { CandidateTools } from "./pages/candidate-tools.js";
+
+import { AppProviders } from "./providers";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProviders>
+      <div className="app">
+        <header>
+          <nav data-uk-navbar>
+            <div className="">
+              <ul className="uk-navbar-nav">
+                <li className="uk-active">
+                  <h1>
+                    <a href="/">Logo</a>
+                  </h1>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/voters" element={<VotersLandingPage />} />
+            <Route path="/candidate" element={<CandidateApplicationPage />} />
+            <Route path="/candidate/tools" element={<CandidateTools />} />
+            <Route path="/candidates/:id" element={<CandidateProfile />} />
+            {/*
+            <Route path="dashboard" element={<Dashboard />}>
+              <Route index element={<RecentActivity />} />
+              <Route path="project/:id" element={<Project />} />
+            </Route>
+            */}
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </AppProviders>
   );
 }
 

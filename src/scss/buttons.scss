@@ -1,0 +1,25 @@
+.btn {
+	display: inline-block;
+	text-align: center;
+	color: var(--democrat-blue);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+		color: var(--democrat-blue-light);
+	}
+
+	&.blocky {
+		background-color: var(--democrat-blue);
+		color: white;
+		padding: 6px 12px;
+		border: solid 1px white;
+		border-radius: 5px;
+		min-width: 100px;
+
+		&:hover {
+			background-color: var(--democrat-blue-light);
+			color: white;
+		}
+	}
+}

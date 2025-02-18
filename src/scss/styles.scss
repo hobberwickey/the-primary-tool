@@ -1,0 +1,48 @@
+@use "./buttons.scss";
+@use "./forms.scss";
+
+@use "./pages/landing.scss";
+@use "./pages/candidate-tools.scss";
+@use "./pages/candidate-profile.scss";
+
+:root {
+	--democrat-blue: #0044c9;
+	--democrat-blue-light: #2a5fc6;
+	--page-width: 1024px;
+}
+
+header {
+	color: white;
+	background-color: var(--democrat-blue);
+
+	nav {
+		width: var(--page-width);
+		display: block;
+		margin: 0px auto;
+
+		h1 {
+			color: white;
+		}
+	}
+}
+
+.page {
+	width: var(--page-width);
+	display: block;
+	margin: 0px auto;
+	padding-top: 30px;
+}
+
+.aligned {
+	display: flex;
+
+	.aligned-left {
+		flex: 1;
+	}
+}
+
+.check-icon-fix {
+	svg {
+		transform: translateY(2px);
+	}
+}
