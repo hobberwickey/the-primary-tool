@@ -23,19 +23,20 @@
 
 	.lander-content {
 		flex: 0.6;
+		padding-left: 60px;
 		// position: absolute;
 		// top: 0px;
 		// left: 0px;
 		// width: 100%;
 		// height: 100%;
-		text-align: center;
+		// text-align: center;
 		// color: white;
 
 		h2 {
 			// color: white;
 			// background-color: rgba(0, 0, 0, 0.2);
 			display: inline-block;
-			margin-top: 30px;
+			margin-top: 0px;
 			padding: 12px;
 			border-radius: 5px;
 		}

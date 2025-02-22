@@ -17,7 +17,7 @@ function App() {
       <div className="app">
         <header>
           <nav data-uk-navbar>
-            <div className="">
+            <div className="uk-navbar-left">
               <ul className="uk-navbar-nav">
                 <li className="uk-active">
                   <a href="/" className="logo">
@@ -25,6 +25,9 @@ function App() {
                   </a>
                 </li>
               </ul>
+            </div>
+            <div className="uk-navbar-right">
+              <div className="btn blocky rev">Sign In</div>
             </div>
           </nav>
         </header>

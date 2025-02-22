@@ -21,5 +21,14 @@
 			background-color: var(--democrat-blue-light);
 			color: white;
 		}
+
+		&.rev {
+			color: var(--democrat-blue);
+			background-color: white;
+
+			&:hover {
+				color: var(--democrat-blue-light);
+			}
+		}
 	}
 }
