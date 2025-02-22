@@ -3,6 +3,12 @@ export const CandidateTools = () => {
     <section id="candidate-tools" className="page">
       <h3>Here's all your tools to manage a successful campaign</h3>
 
+      <p className="parenthetical">
+        This is the real meat and potatoes, we either source or build as needed,
+        open source, free to use tools for literally everything a candidate
+        needs to run a campaign.
+      </p>
+
       <div className="tool website">
         <label>My Website</label>
 

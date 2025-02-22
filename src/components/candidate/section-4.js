@@ -47,9 +47,10 @@ export const CandidateApplicationSection4 = () => {
       <form>
         <h3>Why You're Running</h3>
 
-        <p>
-          The following information will be used to put together a campaign
-          website and other tools to help your campaign succeed
+        <p className="parenthetical">
+          Next we need to design a comprehensive form form the potentional
+          candidate to fill out, which will outline their platform and pitch to
+          the voters. Example:
         </p>
 
         <div className="input-wrapper uk-width-1-1">
@@ -74,6 +75,13 @@ export const CandidateApplicationSection4 = () => {
           ></textarea>
         </div>
 
+        <p className="parenthetical">
+          We can use all this information to automatically build out a
+          collection of resources for the candidate automatically, website,
+          merch, things like a door knocking map. Whatever is needed
+        </p>
+
+        {/*
         {data.issues.map((issue, idx) => {
           return (
             <div className="issue" key={`issue_${idx}`}>
@@ -101,12 +109,14 @@ export const CandidateApplicationSection4 = () => {
             </div>
           );
         })}
+        
 
         <div className="input-wrapper">
           <div className="btn blocky" onClick={addIssue}>
             Add Issue
           </div>
         </div>
+        */}
 
         <div className="actions">
           <div className="btn blocky" onClick={previous}>

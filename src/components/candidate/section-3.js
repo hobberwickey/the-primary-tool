@@ -48,11 +48,10 @@ export const CandidateApplicationSection3 = () => {
       <form>
         <h3>Requirements for {labels[data.office]}</h3>
 
-        <div className="requirements">{requirements[data.office]}</div>
-
-        <p>
-          Please continue filling out this form, everything will be published
-          after your state requirements have been submitted and verified
+        <p className="parenthetical">
+          Here we list out all the requirements to run for whatever office
+          they've selected, along with any forms they need, and whatever tools
+          we can provide to walk them through the process
         </p>
 
         <div className="actions">

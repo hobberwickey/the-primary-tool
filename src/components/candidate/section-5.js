@@ -43,10 +43,10 @@ export const CandidateApplicationSection5 = () => {
       <form>
         <h3>You're In The Running!</h3>
 
-        <p>
-          You candidate form has been completed, you can now access your tools
-          help you in running your campaign. Note, nothing will be visible to
-          voters until we've verified your status with the state.
+        <p className="parenthetical">
+          Now, we wait and verify everything with the state. Once all their
+          paperwork is in order we unlock all their tools and they can publish
+          all their info on the site.
         </p>
 
         <div className="actions">

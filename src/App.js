@@ -20,9 +20,9 @@ function App() {
             <div className="">
               <ul className="uk-navbar-nav">
                 <li className="uk-active">
-                  <h1>
-                    <a href="/">Logo</a>
-                  </h1>
+                  <a href="/" className="logo">
+                    <h2>Democracy Hub</h2>
+                  </a>
                 </li>
               </ul>
             </div>

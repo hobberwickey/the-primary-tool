@@ -30,7 +30,7 @@ export const CandidateApplicationSection2 = () => {
   return (
     <section id="candidate-application-section-2-page">
       <form>
-        <h3>Which Office Do You Want To Run For</h3>
+        <h3>These are the offices you'd be eligible to run for</h3>
 
         <div className="input-wrapper radio required">
           <input

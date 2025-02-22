@@ -32,7 +32,12 @@ export const CandidateApplicationSection1 = () => {
   return (
     <section id="candidate-application-section-1-page">
       <form>
-        <h3>Essentiall Information</h3>
+        <h3>Essential Information</h3>
+
+        <p className="parenthetical">
+          First get whatever basic information we need to see what offices
+          they're eligable for
+        </p>
 
         <div className="input-wrapper uk-width-1-2 required">
           <label>First Name</label>

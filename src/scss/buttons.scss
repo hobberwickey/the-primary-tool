@@ -13,9 +13,9 @@
 		background-color: var(--democrat-blue);
 		color: white;
 		padding: 6px 12px;
-		border: solid 1px white;
 		border-radius: 5px;
 		min-width: 100px;
+		box-shadow: 2px 2px 8px -2px black;
 
 		&:hover {
 			background-color: var(--democrat-blue-light);
