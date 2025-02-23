@@ -57,12 +57,17 @@ header {
 }
 
 .parenthetical {
-	color: #915f5f !important;
+	color: #c94609 !important;
+	padding: 15px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 3px 4px 10px 1px #000;
 }
 
 .app {
 	background-color: var(--light-blue);
 	min-height: 100vh;
+	padding-bottom: 60px;
 }
 
 .check-icon-fix {
