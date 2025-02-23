@@ -1,17 +1,31 @@
 #candidate-profile {
-	.profile-picture {
-		display: inline-block;
+	display: flex;
 
-		span {
-			svg {
-				width: 200px;
-				max-height: 200px;
-			}
-		}
+	.sidebar {
+		flex: 0.2;
 	}
 
-	.profile-info {
-		display: inline-block;
+	.content {
+		flex: 0.8;
+		.profile-picture {
+			display: inline-block;
+
+			span {
+				svg {
+					width: 200px;
+					max-height: 200px;
+				}
+			}
+		}
+
+		.profile-picture {
+			iframe {
+			}
+		}
+
+		.profile-info {
+			display: inline-block;
+		}
 
 		.aligned {
 			.aligned-right {

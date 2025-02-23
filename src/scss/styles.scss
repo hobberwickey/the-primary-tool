@@ -88,4 +88,11 @@ input[type="radio"] {
 
 .uk-subnav {
 	background-color: white;
+	margin-left: 0px;
+
+	li {
+		&:first-child {
+			padding-left: 0px;
+		}
+	}
 }
