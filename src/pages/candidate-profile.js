@@ -34,7 +34,7 @@ export const CandidateProfile = () => {
           </li>
         </ul>
       </div>
-      <div className="content">
+      <div className="page-content">
         <div className="aligned">
           <h1 className="aligned-left">
             {candidate.first_name} {candidate.last_name}
