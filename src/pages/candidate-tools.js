@@ -49,6 +49,22 @@ export const CandidateTools = () => {
           banking and canvasing
         </p>
       </div>
+
+      <div className="tool volunteers">
+        <label>Fundraising</label>
+      </div>
+
+      <div className="tool volunteers">
+        <label>Messaging/Training</label>
+      </div>
+
+      <div className="tool volunteers">
+        <label>Graphic Resources</label>
+      </div>
+
+      <div className="tool volunteers">
+        <label>Union Print Shops</label>
+      </div>
     </section>
   );
 };
