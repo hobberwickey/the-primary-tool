@@ -55,7 +55,12 @@ header {
 	}
 }
 
+.content {
+	display: flex;
+}
+
 .page {
+	flex: 0 1 var(--page-width);
 	display: block;
 	margin: 0px auto;
 	padding: 30px;
