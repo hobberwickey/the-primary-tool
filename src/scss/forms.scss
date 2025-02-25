@@ -43,9 +43,11 @@ form {
 		margin-bottom: 10px;
 		box-sizing: border-box;
 		padding-right: 0px;
+		display: block;
 
 		input {
-			margin-bottom: 0px;
+			margin-bottom: 2px;
+			box-sizing: border-box;
 		}
 
 		.results {
@@ -67,6 +69,7 @@ form {
 				border-radius: 5px;
 				border: solid 1px;
 				cursor: pointer;
+				box-sizing: border-box;
 			}
 		}
 	}
