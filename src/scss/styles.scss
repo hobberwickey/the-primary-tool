@@ -5,6 +5,8 @@
 @use "./pages/candidate-tools.scss";
 @use "./pages/candidate-profile.scss";
 
+@import "~@geoapify/geocoder-autocomplete/styles/minimal.css";
+
 :root {
 	--democrat-blue: #0044c9;
 	--democrat-blue-light: #2a5fc6;

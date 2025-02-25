@@ -12,6 +12,7 @@ import { CandidateTools } from "./pages/candidate-tools.js";
 import { AppProviders } from "./providers";
 
 function App() {
+
   return (
     <AppProviders>
       <header>

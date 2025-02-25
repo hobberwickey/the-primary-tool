@@ -70,7 +70,7 @@ export const CandidateApplicationSection1 = () => {
         <div className="input-wrapper uk-width-1-1">
           <label>Home Address</label>
 
-          <div className="autocomplete">
+          <div className="autocomplete-box">
             <input
               value={search || data?.address || ""}
               onInput={(e) => {
