@@ -1,10 +1,11 @@
 #landing-page {
 	.flex-block {
 		display: flex;
+		gap: 60px;
+		margin-bottom: 32px;
 
 		.actions {
 			display: flex;
-			width: 100%;
 
 			& > div {
 				flex: 1;
@@ -12,19 +13,19 @@
 		}
 
 		.lander {
-			background-image: url("../../../public/images/replace-landing-image.webp");
-			background-size: contain;
-			background-repeat: no-repeat;
+			// Don't show landing image on mobile for a cleaner
+			@media (max-width: 767px) {
+				display: none;
+			}
 			margin: 0px auto;
 			width: 40%;
-			padding-bottom: 42%;
 			position: relative;
 			flex: 0.4;
+			border-radius: 5px;
+			box-shadow: 0px 4px 4px -2px black;
 		}
 
 		.lander-content {
-			flex: 0.6;
-			padding-left: 60px;
 			// position: absolute;
 			// top: 0px;
 			// left: 0px;
@@ -32,13 +33,19 @@
 			// height: 100%;
 			// text-align: center;
 			// color: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+
+			> * {
+				margin: 12px 0px;
+			}
 
 			h2 {
 				// color: white;
 				// background-color: rgba(0, 0, 0, 0.2);
 				display: inline-block;
 				margin-top: 0px;
-				padding: 12px;
 				border-radius: 5px;
 			}
 
@@ -46,7 +53,6 @@
 				// color: white;
 				// background-color: rgba(0, 0, 0, 0.2);
 				display: inline-block;
-				padding: 12px;
 				border-radius: 5px;
 			}
 
@@ -55,14 +61,13 @@
 			}
 
 			.actions {
-				& > div {
-					& > div {
-						// background-color: rgba(0, 0, 0, 0.2);
-						display: inline-block;
-						width: 250px;
-						padding: 12px;
-						border-radius: 5px;
-					}
+				gap: 12px;
+				& > a {
+					padding: 12px 0px;
+					display: flex;
+					justify-content: center;
+					flex: 1;
+					align-items: center;
 				}
 			}
 		}
