@@ -14,7 +14,6 @@ import { AppProviders } from "./providers";
 function App() {
   return (
     <AppProviders>
-      <div className="app">
         <header>
           <nav data-uk-navbar>
             <div className="uk-navbar-left">
@@ -47,7 +46,6 @@ function App() {
             */}
           </Routes>
         </BrowserRouter>
-      </div>
     </AppProviders>
   );
 }
