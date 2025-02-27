@@ -77,4 +77,11 @@ form {
 			}
 		}
 	}
+
+	.override-width {
+		input {
+			width: calc(100% - 32px);
+
+		}
+	}
 }

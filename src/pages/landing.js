@@ -11,7 +11,9 @@ export const LandingPage = () => {
         document.getElementById("landing-autocomplete"),
         "4a88bd1dc48f42389926c1517265c66e",
         {
-          filter: ["us"],
+          filter: {
+            countrycode: ["us"],
+          },
         }
       );
       autocompleteInput.on("select", (location) => {
@@ -30,10 +32,16 @@ export const LandingPage = () => {
           alt="Landing page image"
         />
         <div className="lander-content">
-          <h2>It's Our Government, Make Your Voice Heard</h2>
+          <h2>
+            <strong>It's Our Government</strong>
+            <br />
+            Make your voice heard
+          </h2>
           <form>
             <div className="autocomplete-box input-wrapper">
-              <h3 htmlFor="address">To get started, please enter your address</h3>
+              <h3 htmlFor="address">
+                To get started, please enter your address
+              </h3>
               <div id="landing-autocomplete"></div>
             </div>
           </form>
