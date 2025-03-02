@@ -1,18 +1,15 @@
 import { useState, useEffect, useContext } from "react";
+import { GeocoderAutocomplete } from "@geoapify/geocoder-autocomplete";
 
 import { AppContexts } from "../../providers";
+import { GEOCODER_AUTOCOMPLETE } from '../../constants'
 
 export const CandidateApplicationSection1 = () => {
   const { loading, candidate, setCandidate } = useContext(
-    AppContexts.CandidateContext,
+    AppContexts.CandidateContext
   );
 
   const [data, setData] = useState({ ...candidate });
-  const [search, setSearch] = useState("");
-  const [results, setResults] = useState([
-    "1234 State Rd, Mirkwood City, Old Earth",
-    "26 Rainbow Rd, Star City, Marioland",
-  ]);
 
   useEffect(() => {
     if (!!candidate) {
@@ -28,6 +25,26 @@ export const CandidateApplicationSection1 = () => {
     console.log("Updating Candidate:", candidate);
     setCandidate({ ...data, completed: (candidate.completed += 1) });
   };
+
+  // Set up the address input w/ autocomplete
+  useEffect(() => {
+    if (
+      !document.getElementsByClassName("geoapify-autocomplete-input").length
+    ) {
+      const autocompleteInput = new GeocoderAutocomplete(
+        document.getElementById("application-autocomplete"),
+        GEOCODER_AUTOCOMPLETE,
+        {
+          filter: {
+            countrycode: ["us"],
+          },
+        }
+      );
+      autocompleteInput.on("select", (location) => {
+        update('address', location.properties?.formatted);
+      });
+    }
+  }, []);
 
   return (
     <section id="candidate-application-section-1-page">
@@ -67,33 +84,10 @@ export const CandidateApplicationSection1 = () => {
             onInput={(e) => update("phone", e.target.value)}
           />
         </div>
-        <div className="input-wrapper uk-width-1-1">
+        <div className="input-wrapper uk-width-1-1 autocomplete-box override-width">
           <label>Home Address</label>
 
-          <div className="autocomplete">
-            <input
-              value={search || data?.address || ""}
-              onInput={(e) => {
-                setSearch(e.target.value);
-              }}
-            />
-            {!!search && results.length && (
-              <ul className="uk-list">
-                {results.map((result) => {
-                  return (
-                    <li
-                      onClick={() => {
-                        update("address", result);
-                        setSearch("");
-                      }}
-                    >
-                      {result}
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
-          </div>
+          <div id="application-autocomplete"></div>
         </div>
 
         <div className="actions">

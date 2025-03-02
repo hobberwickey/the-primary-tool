@@ -38,12 +38,16 @@ form {
 		margin-top: 30px;
 	}
 
-	.autocomplete {
+	.autocomplete-box {
 		position: relative;
 		margin-bottom: 10px;
 		box-sizing: border-box;
 		padding-right: 0px;
 		display: block;
+
+		> div {
+			position: relative;
+		}
 
 		input {
 			margin-bottom: 2px;
@@ -71,6 +75,13 @@ form {
 				cursor: pointer;
 				box-sizing: border-box;
 			}
+		}
+	}
+
+	.override-width {
+		input {
+			width: calc(100% - 32px);
+
 		}
 	}
 }
