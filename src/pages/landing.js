@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { GeocoderAutocomplete } from "@geoapify/geocoder-autocomplete";
+import { GEOCODER_AUTOCOMPLETE } from "../constants";
 
 export const LandingPage = () => {
   const [address, setAddress] = useState(undefined);
@@ -9,7 +10,7 @@ export const LandingPage = () => {
     if (!document.getElementsByClassName("geoapify-autocomplete-input").length) {
       const autocompleteInput = new GeocoderAutocomplete(
         document.getElementById("landing-autocomplete"),
-        "4a88bd1dc48f42389926c1517265c66e",
+        GEOCODER_AUTOCOMPLETE,
         {
           filter: {
             countrycode: ["us"],
@@ -17,8 +18,7 @@ export const LandingPage = () => {
         }
       );
       autocompleteInput.on("select", (location) => {
-        setAddress(location.properties.formatted);
-        console.log("Selected location:", location);
+        setAddress(location?.properties.formatted);
       });
     }
   }, [])

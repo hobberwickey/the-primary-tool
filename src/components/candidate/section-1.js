@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { GeocoderAutocomplete } from "@geoapify/geocoder-autocomplete";
 
 import { AppContexts } from "../../providers";
+import { GEOCODER_AUTOCOMPLETE } from '../../constants'
 
 export const CandidateApplicationSection1 = () => {
   const { loading, candidate, setCandidate } = useContext(
@@ -32,7 +33,7 @@ export const CandidateApplicationSection1 = () => {
     ) {
       const autocompleteInput = new GeocoderAutocomplete(
         document.getElementById("application-autocomplete"),
-        "4a88bd1dc48f42389926c1517265c66e",
+        GEOCODER_AUTOCOMPLETE,
         {
           filter: {
             countrycode: ["us"],
@@ -40,7 +41,7 @@ export const CandidateApplicationSection1 = () => {
         }
       );
       autocompleteInput.on("select", (location) => {
-        update('address', location.properties.formatted);
+        update('address', location.properties?.formatted);
       });
     }
   }, []);
